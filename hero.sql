@@ -163,3 +163,7 @@ SELECT p.player_name, h.hero_id
 FROM player p
 JOIN hero h ON p.hero_id = h.hero_id
 WHERE h.is_active = true;
+
+SELECT hero_name
+FROM hero
+WHERE class_id = (SELECT class_id FROM class WHERE class_name = 'Archers');
